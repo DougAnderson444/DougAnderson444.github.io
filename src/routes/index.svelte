@@ -1,13 +1,21 @@
+<script context="module">
+  export async function preload() {
+    const res = await this.fetch(`/.well-known/dat`);
+    const wellKnown = await res.text();
+    return { wellKnown };
+  }
+</script>
+
 <script>
   import { onMount } from "svelte";
 
-  let wellKnown;
+  export let wellKnown;
 
   // Check if there's a ./.well-known/dat to load data
   // if not, load the hypercreator
   onMount(async () => {
     const res = await fetch("/.well-known/dat");
-    wellKnown = await res.text();
+    //wellKnown = await res.text();
   });
 </script>
 
