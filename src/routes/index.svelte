@@ -14,13 +14,14 @@
   import { onMount } from "svelte";
 
   export let wellKnown;
-
+  console.log({ wellKnown });
   // Check if there's a ./.well-known/dat to load data
   // if not, load the hypercreator
   onMount(async () => {
     if (!wellKnown) {
-      const res = await fetch("/.well-known/dat");
-      wellKnown = await res.text();
+      wellKnown = await datDns.resolveName(
+        "https://douganderson444.github.io/"
+      );
     }
   });
 </script>
