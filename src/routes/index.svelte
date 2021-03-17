@@ -29,7 +29,8 @@
 
 <p>
   <strong>
-    Editing this file (src/routes/index.svelte) to test live reloading.
+    Created with Sapper. Edit this file (src/routes/index.svelte) to, well,
+    edit.
   </strong>
 </p>
 
