@@ -1,7 +1,7 @@
 {
   "name": "douganderson444.github.io",
   "description": "douganderson444.github.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "dat-dns": "^4.1.2",
     "polka": "next",
     "sirv": "^1.0.0"
   },
