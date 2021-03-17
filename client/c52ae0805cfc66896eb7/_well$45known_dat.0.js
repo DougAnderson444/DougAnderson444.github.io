@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{4:function(A,e,n){"use strict";n.r(e);var c=n(0),t=n(1);function o(A){return Object(t.c)(async()=>{document.open(),document.write("hyper://GITHUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD"),document.close()}),[]}class s extends c.a{constructor(A){super(),Object(c.v)(this,A,o,null,c.D,{})}}e.default=s}}]);
