@@ -3,10 +3,15 @@
   let datDns = DNS();
 
   export async function preload() {
-    const wellKnown = await datDns.resolveName(
-      "https://douganderson444.github.io/"
-    );
-    return { wellKnown };
+    try {
+      const wellKnown = await datDns.resolveName(
+        "https://douganderson444.github.io/"
+      );
+      return { wellKnown };
+    } catch (error) {
+      console.error(error);
+      return { wellKnown: false };
+    }
   }
 </script>
 
@@ -19,9 +24,13 @@
   // if not, load the hypercreator
   onMount(async () => {
     if (!wellKnown) {
-      wellKnown = await datDns.resolveName(
-        "https://douganderson444.github.io/"
-      );
+      try {
+        wellKnown = await datDns.resolveName(
+          "https://douganderson444.github.io/"
+        );
+      } catch (error) {
+        console.error(error);
+      }
     }
   });
 </script>
