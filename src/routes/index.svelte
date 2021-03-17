@@ -1,7 +1,11 @@
 <script context="module">
+  import { default as DNS } from "dat-dns";
+  let datDns = DNS();
+
   export async function preload() {
-    const res = await this.fetch(`/.well-known/dat`);
-    const wellKnown = await res.text();
+    const wellKnown = await datDns.resolveName(
+      "https://douganderson444.github.io/"
+    );
     return { wellKnown };
   }
 </script>
