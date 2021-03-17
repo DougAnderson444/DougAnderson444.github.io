@@ -19,6 +19,20 @@
   });
 </script>
 
+<svelte:head>
+  <title>Doug's Github Page</title>
+</svelte:head>
+
+<h1>Great success!</h1>
+
+<p>Well-Known: {wellKnown}</p>
+
+<p>
+  <strong>
+    Editing this file (src/routes/index.svelte) to test live reloading.
+  </strong>
+</p>
+
 <style>
   h1,
   p {
@@ -43,17 +57,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<p>Well-Known: {wellKnown}</p>
-
-<p>
-  <strong>
-    Editing this file (src/routes/index.svelte) to test live reloading.
-  </strong>
-</p>
