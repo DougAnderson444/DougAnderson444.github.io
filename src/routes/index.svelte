@@ -14,8 +14,10 @@
   // Check if there's a ./.well-known/dat to load data
   // if not, load the hypercreator
   onMount(async () => {
-    const res = await fetch("/.well-known/dat");
-    //wellKnown = await res.text();
+    if (!wellKnown) {
+      const res = await fetch("/.well-known/dat");
+      wellKnown = await res.text();
+    }
   });
 </script>
 
