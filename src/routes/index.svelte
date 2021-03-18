@@ -1,10 +1,16 @@
 <script context="module">
   import { default as DNS } from "dat-dns";
-  let datDns = DNS();
+  let peerPiperWellKnown = DNS({
+    recordName: "piper",
+    hashRegex: /^[0-9a-f]{64}?$/i,
+    protocolRegex: /^piper:\/\/([0-9a-f]{64})/i,
+    txtRegex: /^"?piper=([0-9a-f]{64})"?$/i,
+  });
 
-  export async function preload() {
+  export async function preload(page, session) {
     try {
-      const wellKnown = await datDns.resolveName(
+      console.log("page.host", page.host);
+      const wellKnown = await peerPiperWellKnown.resolveName(
         "https://douganderson444.github.io/"
       );
       return { wellKnown };
@@ -25,7 +31,7 @@
   onMount(async () => {
     if (!wellKnown) {
       try {
-        wellKnown = await datDns.resolveName(
+        wellKnown = await peerPiperWellKnown.resolveName(
           "https://douganderson444.github.io/"
         );
       } catch (error) {
