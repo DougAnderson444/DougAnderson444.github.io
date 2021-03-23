@@ -49,12 +49,14 @@
 
 <p>Well-Known: {wellKnown}</p>
 
-<p>
+<div>
   <strong>
     Created with Sapper. Edit this file (src/routes/index.svelte) to, well,
     edit.
   </strong>
-</p>
+  <p>Demos</p>
+  <a href="/schema">Schema Explorer</a>
+</div>
 
 <style>
   h1,
