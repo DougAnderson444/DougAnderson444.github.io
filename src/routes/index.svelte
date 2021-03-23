@@ -1,7 +1,7 @@
 <script context="module">
   import { default as DNS } from "dat-dns";
   let peerPiperWellKnown = DNS({
-    recordName: "piper",
+    recordName: "doug/piper",
     hashRegex: /^[0-9a-f]{64}?$/i,
     protocolRegex: /^piper:\/\/([0-9a-f]{64})/i,
     txtRegex: /^"?piper=([0-9a-f]{64})"?$/i,
@@ -9,7 +9,6 @@
 
   export async function preload(page, session) {
     try {
-      console.log("page.host", page.host);
       const wellKnown = await peerPiperWellKnown.resolveName(
         "https://douganderson444.github.io/"
       );
@@ -23,9 +22,9 @@
 
 <script>
   import { onMount } from "svelte";
+  import SchemaComp from "./schema.svelte";
 
   export let wellKnown;
-  console.log({ wellKnown });
   // Check if there's a ./.well-known/dat to load data
   // if not, load the hypercreator
   onMount(async () => {
@@ -44,24 +43,26 @@
 <svelte:head>
   <title>Doug's Github Page</title>
 </svelte:head>
+<main>
+  <h1>Great success!</h1>
 
-<h1>Great success!</h1>
+  <p>Well-Known: {wellKnown}</p>
 
-<p>Well-Known: {wellKnown}</p>
-
-<div>
   <strong>
     Created with Sapper. Edit this file (src/routes/index.svelte) to, well,
     edit.
   </strong>
-  <p>Demos</p>
-  <a href="/schema">Schema Explorer</a>
-</div>
+  <p>Demos:</p>
+  <ul>
+    <!-- rel="external" -->
+    <li><a href="schema">Schema.org Explorer</a></li>
+  </ul>
+</main>
 
 <style>
   h1,
   p {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
   }
 
@@ -81,4 +82,16 @@
       font-size: 4em;
     }
   }
+  main {
+    padding: 12px;
+  }
+  /* .container {
+    width: 50%;
+    height: 550px;
+    overflow-y: auto;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 5px solid rgba(128, 128, 128, 0.486);
+    border-radius: 8px;
+  } */
 </style>
