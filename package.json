@@ -1,7 +1,7 @@
 {
   "name": "douganderson444.github.io",
   "description": "douganderson444.github.io",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export",
