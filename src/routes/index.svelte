@@ -54,8 +54,7 @@
   </strong>
   <p>Demos:</p>
   <ul>
-    <!-- rel="external" -->
-    <li><a href="schema">Schema.org Explorer</a></li>
+    <li><a href="/schema" rel="external">Schema.org Explorer</a></li>
   </ul>
 </main>
 
