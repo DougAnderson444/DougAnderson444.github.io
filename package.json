@@ -1,11 +1,11 @@
 {
   "name": "douganderson444.github.io",
   "description": "douganderson444.github.io",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export",
-    "export": "sapper export --basepath douganderson444.github.io",
+    "export": "sapper export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
