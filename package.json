@@ -1,7 +1,7 @@
 {
   "name": "douganderson444.github.io",
   "description": "douganderson444.github.io",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export",
@@ -15,7 +15,7 @@
     "compression": "^1.7.1",
     "dat-dns": "^4.1.2",
     "polka": "next",
-    "schema-explorer": "git+https://github.com/DougAnderson444/schema-explorer.git#42500c900cce40d2adf3cbecd0d9a91287cea0e2",
+    "schema-explorer": "^0.0.8",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
