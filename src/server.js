@@ -8,7 +8,7 @@ const dev = NODE_ENV === 'development'
 // const ghpage = !dev ? 'douganderson444.github.io' : ''
 polka() // You can also use Express
   .use(
-    'douganderson444.github.io',
+    '',
     compression({ threshold: 0 }),
     sirv('static', { dev }),
     sapper.middleware()
