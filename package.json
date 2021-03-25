@@ -1,7 +1,7 @@
 {
   "name": "douganderson444.github.io",
   "description": "douganderson444.github.io",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export",
@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
-    "sapper": "^0.28.0",
-    "svelte": "^3.17.3",
+    "sapper": "^0.29.1",
+    "svelte": "^3.35.0",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.7.0",
     "webpack-modules": "^1.0.0"
