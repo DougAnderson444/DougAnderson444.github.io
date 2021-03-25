@@ -23,4 +23,4 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.PUBLISH_SAPPER_PAGE }}
         BRANCH: gh-pages
-        FOLDER: __sapper__/export/douganderson444.github.io
+        FOLDER: __sapper__/export/

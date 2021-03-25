@@ -8,11 +8,10 @@ const dev = NODE_ENV === 'development'
 // const ghpage = !dev ? 'douganderson444.github.io' : ''
 polka() // You can also use Express
   .use(
-    '',
+    // 'douganderson444.github.io',    // , ghpage
     compression({ threshold: 0 }),
     sirv('static', { dev }),
     sapper.middleware()
-    // , ghpage
   )
   .listen(PORT, err => {
     if (err) console.log('error', err)
